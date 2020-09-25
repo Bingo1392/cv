@@ -13,4 +13,11 @@ export const PlaceholderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 360px;
+`;
+
+export const AnimationWrapper = styled.div`
+  height: ${(props) => props.change ? '200px' : '0'};
+  //width: ${(props) => props.change ? '230px' : '0'};
+  transition: all 0.3s linear;
 `;

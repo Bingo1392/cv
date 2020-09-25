@@ -1,10 +1,11 @@
-import React, { useEffect, createRef } from "react"
-import { PlaceholderWrapper } from "./Placeholder.styles";
+import React, { useEffect, createRef, useState } from "react"
+import { AnimationWrapper, PlaceholderWrapper } from "./Placeholder.styles"
 import lottie from 'lottie-web';
 import animation from '../../animations/build_product_animation.json';
 
 const Placeholder = () => {
   let animationContainer = createRef();
+  const [change, toggleChange] = useState(false);
 
   useEffect(() => {
     const anim = lottie.loadAnimation({
@@ -14,13 +15,16 @@ const Placeholder = () => {
       autoplay: true,
       animationData: animation
     })
+    setTimeout(() => {
+      toggleChange(!change);
+    }, 3000);
     return () => anim.destroy();
   }, []);
 
   return (
     <PlaceholderWrapper>
       <div>
-        <div style={{ maxWidth: '400px' }} ref={animationContainer} />
+        <AnimationWrapper change={change} ref={animationContainer} />
       </div>
       <h1>Pracuji na tom...</h1>
     </PlaceholderWrapper>
