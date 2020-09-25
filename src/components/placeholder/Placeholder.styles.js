@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Sizes } from "../../styles/common"
 
 export const PlaceholderContainer = styled.div`
   width: 100vw;
@@ -14,10 +15,19 @@ export const PlaceholderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 360px;
+  h1 {
+    margin-top: ${Sizes.m};
+  }
 `;
 
 export const AnimationWrapper = styled.div`
-  height: ${(props) => props.change ? '200px' : '0'};
-  //width: ${(props) => props.change ? '230px' : '0'};
-  transition: height 0.5s linear;
+  height: 200px;
+  opacity: ${(props) => props.change ? 1 : 0};
+  transition: opacity 1s ease;
+`;
+
+export const Border = styled.div`
+  width: 360px;
+  border: 2px solid black;
+  border-radius: ${Sizes.m};
 `;

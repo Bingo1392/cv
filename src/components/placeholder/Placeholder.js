@@ -1,5 +1,5 @@
 import React, { useEffect, createRef, useState } from "react"
-import { AnimationWrapper, PlaceholderWrapper } from "./Placeholder.styles"
+import { AnimationWrapper, Border, PlaceholderWrapper } from "./Placeholder.styles"
 import lottie from 'lottie-web';
 import animation from '../../animations/build_product_animation.json';
 
@@ -15,18 +15,17 @@ const Placeholder = () => {
       autoplay: true,
       animationData: animation
     })
-    toggleChange(!change);
-    // setTimeout(() => {
-    //   toggleChange(!change);
-    // }, 3000);
+    setTimeout(() => {
+      toggleChange(!change);
+    }, 20);
     return () => anim.destroy();
   }, []);
 
   return (
     <PlaceholderWrapper>
-      <div>
+      <Border>
         <AnimationWrapper change={change} ref={animationContainer} />
-      </div>
+      </Border>
       <h1>Pracuji na tom...</h1>
     </PlaceholderWrapper>
   )
