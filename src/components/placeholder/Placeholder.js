@@ -15,9 +15,10 @@ const Placeholder = () => {
       autoplay: true,
       animationData: animation
     })
-    setTimeout(() => {
-      toggleChange(!change);
-    }, 3000);
+    toggleChange(!change);
+    // setTimeout(() => {
+    //   toggleChange(!change);
+    // }, 3000);
     return () => anim.destroy();
   }, []);
 

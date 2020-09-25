@@ -19,5 +19,5 @@ export const PlaceholderWrapper = styled.div`
 export const AnimationWrapper = styled.div`
   height: ${(props) => props.change ? '200px' : '0'};
   //width: ${(props) => props.change ? '230px' : '0'};
-  transition: all 0.3s linear;
+  transition: height 0.5s linear;
 `;
