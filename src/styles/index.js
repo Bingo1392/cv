@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   // }
   body {
     //background-color: ${Colors.backgroundBody};
-    background-color: darkgrey;
+    background-color: #1d1d1d;
     font-family: "Bookman", serif;
     font-size: ${Sizes.font};
     color: ${Colors.standardFont};

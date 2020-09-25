@@ -14,7 +14,7 @@ export const PlaceholderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 360px;
+  //width: 360px;
   h1 {
     margin-top: ${Sizes.m};
   }
@@ -22,12 +22,12 @@ export const PlaceholderWrapper = styled.div`
 
 export const AnimationWrapper = styled.div`
   height: 200px;
-  opacity: ${(props) => props.change ? 1 : 0};
-  transition: opacity 1s ease;
+  // opacity: ${(props) => props.change ? 1 : 0};
+  // transition: opacity 1s ease;
 `;
 
 export const Border = styled.div`
-  width: 360px;
-  border: 2px solid black;
-  border-radius: ${Sizes.m};
+  //width: 360px;
+  // border: 2px solid black;
+  // border-radius: ${Sizes.m};
 `;

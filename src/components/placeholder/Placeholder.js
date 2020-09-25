@@ -1,7 +1,7 @@
 import React, { useEffect, createRef, useState } from "react"
 import { AnimationWrapper, Border, PlaceholderWrapper } from "./Placeholder.styles"
 import lottie from 'lottie-web';
-import animation from '../../animations/build_product_animation.json';
+import animation from '../../animations/Chemical.json';
 
 const Placeholder = () => {
   let animationContainer = createRef();
@@ -11,14 +11,10 @@ const Placeholder = () => {
     const anim = lottie.loadAnimation({
       container: animationContainer.current,
       renderer: 'svg',
-      loop: true,
+      loop: false,
       autoplay: true,
       animationData: animation
     })
-    setTimeout(() => {
-      toggleChange(!change);
-    }, 20);
-    return () => anim.destroy();
   }, []);
 
   return (
