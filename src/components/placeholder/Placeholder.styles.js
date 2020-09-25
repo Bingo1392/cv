@@ -14,7 +14,7 @@ export const PlaceholderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //width: 360px;
+  width: 300px;
   h1 {
     margin-top: ${Sizes.m};
   }
